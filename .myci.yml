@@ -1,0 +1,3 @@
+pipeline_template: examples/script/Jenkinsfile
+some_config: imaconfigvalue
+script_to_run: run.sh
