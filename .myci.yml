@@ -3,7 +3,7 @@ some_config: imaconfigvalue
 script_to_run: |-
   pip install --user pipenv
   export PATH=$(python -m site --user-base)/bin:$PATH
-  pipenv install --dev --system --deploy
+  pipenv install --three --dev --system --deploy
   #export VENV_HOME_DIR=$(pipenv --venv)
   #source ${VENV_HOME_DIR}/bin/activate
   pytest
