@@ -1,4 +1,4 @@
-pipeline_template: examples/script/Jenkinsfile
+pipeline_template: examples/python/Jenkinsfile
 some_config: imaconfigvalue
 script_to_run: |-
   pip install -r requirements.txt
