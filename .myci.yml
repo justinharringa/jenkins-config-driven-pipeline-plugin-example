@@ -7,4 +7,4 @@ script_to_run: |-
   export VENV_HOME_DIR=$(pipenv --venv)
   source ${VENV_HOME_DIR}/bin/activate
   #pipenv shell
-  ${VENV_HOME_DIR}/pytest
+  ${VENV_HOME_DIR}/bin/pytest
