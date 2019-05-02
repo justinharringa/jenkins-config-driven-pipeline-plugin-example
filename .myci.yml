@@ -3,4 +3,4 @@ some_config: imaconfigvalue
 script_to_run: |-
   pip install --user pipenv
   export PATH=$(python -m site --user-base)/bin:$PATH
-  pipenv run py.test --capture=no --ds=config.settings.test --flake8 .
+  pipenv run pytest --capture=no --ds=config.settings.test --flake8 .
