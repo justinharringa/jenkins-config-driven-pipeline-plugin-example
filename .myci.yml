@@ -2,6 +2,7 @@ pipeline_template: examples/python/Jenkinsfile
 some_config: imaconfigvalue
 script_to_run: |-
   pip install --user pipenv
+  export PATH=$(python -m site --user-base)/bin:$PATH
   pipenv install
   export VENV_HOME_DIR=$(pipenv --venv)
   source ${VENV_HOME_DIR}/bin/activate
