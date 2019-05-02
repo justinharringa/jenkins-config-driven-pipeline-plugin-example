@@ -2,6 +2,6 @@ pipeline_template: examples/python/Jenkinsfile
 some_config: imaconfigvalue
 script_to_run: |-
   pip install --user pipenv
-  python -m site --user-base
+  export PATH=$(python -m site --user-base)/bin:$PATH
   pipenv shell
   pipenv run pytest
