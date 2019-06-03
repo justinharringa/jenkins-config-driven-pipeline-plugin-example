@@ -5,8 +5,5 @@ agent_label: some-other-label
 script_to_run: |-
   pip install pipenv
   export PATH=$(python -m site --user-base)/bin:$PATH
-  pipenv install --dev
-  export VENV_HOME_DIR=$(pipenv --venv)
-  . ${VENV_HOME_DIR}/bin/activate
-  #pipenv shell
-  ${VENV_HOME_DIR}/bin/pytest
+  pipenv install --system
+  pytest
