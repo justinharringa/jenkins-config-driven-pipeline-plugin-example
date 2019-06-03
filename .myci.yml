@@ -1,3 +1,9 @@
-pipeline_template: examples/script/Jenkinsfile
+pipeline_template: examples/dynamic/Jenkinsfile
 some_config: imaconfigvalue
-script_to_run: run.sh
+docker_container: python:3.6-stretch
+agent_label: some-other-label
+script_to_run: |-
+  pip install pipenv
+  export PATH=$(python -m site --user-base)/bin:$PATH
+  pipenv install --dev --system
+  pytest
