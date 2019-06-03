@@ -7,6 +7,6 @@ script_to_run: |-
   export PATH=$(python -m site --user-base)/bin:$PATH
   pipenv install --dev
   export VENV_HOME_DIR=$(pipenv --venv)
-  source ${VENV_HOME_DIR}/bin/activate
+  . ${VENV_HOME_DIR}/bin/activate
   #pipenv shell
   ${VENV_HOME_DIR}/bin/pytest
