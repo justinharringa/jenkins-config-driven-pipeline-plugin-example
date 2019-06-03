@@ -1,5 +1,6 @@
-pipeline_template: examples/python/Jenkinsfile
+pipeline_template: examples/dynamic/Jenkinsfile
 some_config: imaconfigvalue
+docker_container: python:3.6-stretch
 script_to_run: |-
   pip install pipenv
   export PATH=$(python -m site --user-base)/bin:$PATH
